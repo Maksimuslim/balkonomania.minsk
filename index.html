@@ -185,21 +185,31 @@ white-space: normal; /* Разрешить перенос строк */
 }
 
 .instagram-link {
-    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-    white-space: nowrap;
-    margin-left: 100px; /* Большой отступ слева от Instagram */
+    color: #333; /* Цвет текста */
+    transition: all 0.3s ease;
 }
 
 .instagram-link:hover {
-    color: var(--accent);
+    color: #E1306C; /* Цвет Instagram при наведении */
 }
 
-.instagram-link::before {
-    content: '📷';
-    margin-right: 5px;
+.instagram-icon {
+    width: 20px;
+    height: 20px;
+    transition: fill 0.3s ease;
+}
+
+.instagram-link:hover .instagram-icon {
+    fill: #E1306C; /* Цвет иконки при наведении */
+}
+
+.instagram-text {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 /* Навигация - смещена максимально вправо */
